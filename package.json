@@ -12,7 +12,7 @@
     "functional": "node test/functional.js | tap-dot",
     "import": "npm run start",
     "lint": "jshint .",
-    "postinstall": "npm run download_metadata",
+    "postinstall": "mkdirp metadata && node bin/updateMetadata.js",
     "start": "node import.js",
     "test": "npm run units",
     "travis": "npm run check-dependencies && npm test && npm run functional",
